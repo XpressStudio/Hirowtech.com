@@ -1,23 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // ===== Typewriter Effect =====
-  const words = [
-    "Aluminum Works",
-    "Glass & Glazing Solutions",
-    "Stainless Steel Works",
-    "Steel & Iron Fabrication",
-    "Roofing & Canopy Systems"
-  ];
-
   const typewriterElement = document.getElementById("typewriter");
+  const words = ["regional companies", "engineering specialists", "trading partners", "fabrication teams", "service divisions"];
   let wordIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
 
   function typeEffect() {
+    if (!typewriterElement) return;
     const currentWord = words[wordIndex];
-    const currentText = currentWord.substring(0, charIndex);
-    typewriterElement.textContent = currentText;
-
+    typewriterElement.textContent = currentWord.substring(0, charIndex);
     if (!isDeleting && charIndex < currentWord.length) {
       charIndex++;
       setTimeout(typeEffect, 90);
@@ -35,78 +26,48 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   }
-
   typeEffect();
 
-  // ===== Popup Modal =====
-  const bookCallBtn = document.getElementById("bookCallBtn");
-  const openPopupBtn = document.getElementById("openPopupBtn");
-  const closePopupBtn = document.getElementById("closePopupBtn");
-  const popupOverlay = document.getElementById("popupOverlay");
+  const chooser = document.getElementById("companyChooser");
+  const openChooserBtn = document.getElementById("openChooserBtn");
+  const closeChooser = document.getElementById("closeChooser");
 
-  function openPopup(event) {
-    event.preventDefault();
-    popupOverlay.classList.add("active");
+  function openChooser() {
+    if (!chooser) return;
+    chooser.classList.add("active");
+    chooser.setAttribute("aria-hidden", "false");
+  }
+  function closeCompanyChooser() {
+    if (!chooser) return;
+    chooser.classList.remove("active");
+    chooser.setAttribute("aria-hidden", "true");
   }
 
-  function closePopup() {
-    popupOverlay.classList.remove("active");
+  if (chooser && !sessionStorage.getItem("hirowtechCompanyChooserShown")) {
+    setTimeout(openChooser, 700);
+    sessionStorage.setItem("hirowtechCompanyChooserShown", "true");
+  }
+  if (openChooserBtn) openChooserBtn.addEventListener("click", openChooser);
+  if (closeChooser) closeChooser.addEventListener("click", closeCompanyChooser);
+  if (chooser) chooser.addEventListener("click", function (event) { if (event.target === chooser) closeCompanyChooser(); });
+
+  const mobileToggle = document.getElementById("mobileToggle");
+  const navMenu = document.getElementById("navMenu");
+  if (mobileToggle && navMenu) {
+    mobileToggle.addEventListener("click", function () { navMenu.classList.toggle("active"); });
   }
 
-  bookCallBtn.addEventListener("click", openPopup);
-  openPopupBtn.addEventListener("click", openPopup);
-  closePopupBtn.addEventListener("click", closePopup);
-
-  popupOverlay.addEventListener("click", function (event) {
-    if (event.target === popupOverlay) {
-      closePopup();
-    }
+  document.querySelectorAll(".accordion-header").forEach(function (header) {
+    header.addEventListener("click", function () {
+      const item = header.parentElement;
+      document.querySelectorAll(".accordion-item").forEach(function (otherItem) {
+        if (otherItem !== item) otherItem.classList.remove("active");
+      });
+      item.classList.toggle("active");
+    });
   });
 
   document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
-      closePopup();
-    }
+    if (event.key === "Escape") closeCompanyChooser();
   });
-});
-
-// ===== About Accordion =====
-const accordionItems = document.querySelectorAll(".accordion-item");
-
-accordionItems.forEach((item) => {
-  const header = item.querySelector(".accordion-header");
-
-  header.addEventListener("click", () => {
-    const isActive = item.classList.contains("active");
-
-    accordionItems.forEach((accordion) => {
-      accordion.classList.remove("active");
-      accordion.querySelector(".accordion-icon").textContent = "+";
-    });
-
-    if (!isActive) {
-      item.classList.add("active");
-      item.querySelector(".accordion-icon").textContent = "−";
-    }
-  });
-});
-
-// ===== Reveal on Scroll: Advantage Section =====
-const revealElements = document.querySelectorAll(".reveal-card, .reveal-strip");
-
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  },
-  {
-    threshold: 0.15
-  }
-);
-
-revealElements.forEach((element) => {
-  revealObserver.observe(element);
 });
