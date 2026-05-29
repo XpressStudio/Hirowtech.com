@@ -1,573 +1,866 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hirowtech Hero Section</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Hirowtech Hero Section
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
   <header class="navbar">
-    <div class="nav-container">
-      <div class="logo">
-        <img src="web-logo.png" alt="Hirowtech Logo">
-      </div>
-
-      <nav class="nav-menu">
-        <a href="#" class="active">HOME</a>
-        <a href="#">ABOUT</a>
-        <a href="#">SERVICES</a>
-        <a href="#">PROJECTS</a>
-        <a href="#">BLOG</a>
-      </nav>
-
-      <div class="nav-right">
-        <a href="#contact-popup" class="contact-btn" id="openPopupBtn">CONTACT US</a>
-      </div>
+   <div class="nav-container">
+    <div class="logo">
+     <img alt="Hirowtech Logo" src="web-logo.png"/>
     </div>
+    <nav class="nav-menu" id="navMenu">
+     <a class="active" href="#">
+      HOME
+     </a>
+     <a href="#">
+      ABOUT
+     </a>
+     <div class="nav-dropdown">
+      <button class="dropdown-toggle">COMPANIES <span>▾</span></button>
+      <div class="dropdown-menu">
+       <a href="hirowtech-services-wll.html"><small>Bahrain</small>Hirowtech Services W.L.L</a>
+       <a href="hirowtech-services-india.html"><small>India</small>Hirowtech Services IN</a>
+       <a href="hirowtech-engineering.html"><small>Sri Lanka</small>Hirowtech Engineering</a>
+       <a href="hirowtech-trading.html"><small>Sri Lanka</small>Hirowtech Trading &amp; Services</a>
+      </div>
+     </div>
+     <a href="#">
+      SERVICES
+     </a>
+     <a href="#">
+      PROJECTS
+     </a>
+     <a href="#">
+      BLOG
+     </a>
+    </nav>
+    <div class="nav-right">
+     <button class="mobile-toggle" id="mobileToggle">☰</button>
+     <a class="contact-btn" href="#contact-popup" id="openPopupBtn">
+      CONTACT US
+     </a>
+    </div>
+   </div>
   </header>
 
-  <section class="hero">
-    <video autoplay muted loop playsinline class="hero-video">
-      <source src="Hero-Section-Video-BG.mp4" type="video/mp4">>
-      Your browser does not support the video tag.
-    </video>
-
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-      <div class="hero-left">
-        <div class="typewriter-wrap">
-          <span class="typewriter-prefix">We expertise in</span>
-          <span class="typewriter-text" id="typewriter"></span>
-        </div>
-        <p>
-          Premier Fabrication in Aluminum, Glass, and Steel, Delivering High-Quality
-          Architectural Solutions, Structural Engineering, and Custom Roofing for Developments.
-        </p>
-
-        <div class="hero-buttons">
-          <button class="btn btn-light" id="bookCallBtn">BOOK A CALL</button>
-          <a href="#" class="btn btn-orange">OUR SERVICES</a>
-        </div>
-      </div>
-
-      <div class="hero-right">
-        <div class="stats-grid">
-          <div class="stat-box">
-            <h2>200<span>+</span></h2>
-            <p>Projects Completed</p>
-          </div>
-
-          <div class="stat-box">
-            <h2>15<span>+</span></h2>
-            <p>Cities Transformed</p>
-          </div>
-
-          <div class="stat-box">
-            <h2>15<span>+</span></h2>
-            <p>Years of Engineering Excellence</p>
-          </div>
-
-          <div class="stat-box">
-            <h2>100<span>%</span></h2>
-            <p>Grade-A Certified Materials</p>
-          </div>
-        </div>
-      </div>
+  <!-- Company Selection Popup -->
+  <div class="company-selector-overlay" id="companySelectorOverlay">
+   <div class="company-selector-card">
+    <button class="company-selector-close" id="closeCompanySelector" aria-label="Close company selector">&times;</button>
+    <div class="company-selector-header">
+     <span>Choose Your Company / Country</span>
+     <h2>Select the Hirowtech division you want to visit</h2>
+     <p>Choose the relevant company website based on your preferred country or division.</p>
     </div>
+    <div class="company-selector-grid">
+     <a class="company-select-card" href="hirowtech-services-wll.html">
+      <small>Bahrain</small>
+      <strong>Hirowtech Services W.L.L</strong>
+      <p>Aluminum, glass, stainless steel, steel, iron, roofing, and canopy solutions.</p>
+     </a>
+     <a class="company-select-card" href="hirowtech-services-india.html">
+      <small>India</small>
+      <strong>Hirowtech Services IN</strong>
+      <p>Aluminum, glass, steel, roofing, canopy, and facility management solutions.</p>
+     </a>
+     <a class="company-select-card" href="hirowtech-engineering.html">
+      <small>Sri Lanka</small>
+      <strong>Hirowtech Engineering</strong>
+      <p>Architectural and structural engineering solutions with fabrication excellence.</p>
+     </a>
+     <a class="company-select-card" href="hirowtech-trading.html">
+      <small>Sri Lanka</small>
+      <strong>Hirowtech Trading &amp; Services</strong>
+      <p>Import, export, and distribution of all kinds of building materials.</p>
+     </a>
+    </div>
+    <div class="company-selector-footer">
+     <button class="continue-group-btn" id="continueGroupSite" type="button">CONTINUE TO GROUP WEBSITE</button>
+    </div>
+   </div>
+  </div>
+  <section class="hero">
+   <video autoplay="" class="hero-video" loop="" muted="" playsinline="">
+    <source src="Hero-Section-Video-BG.mp4" type="video/mp4"/>
+    &gt;
+      Your browser does not support the video tag.
+   </video>
+   <div class="overlay">
+   </div>
+   <div class="hero-content">
+    <div class="hero-left">
+     <div class="typewriter-wrap">
+      <span class="typewriter-prefix">
+       We expertise in
+      </span>
+      <span class="typewriter-text" id="typewriter">
+      </span>
+     </div>
+     <p>
+      Premier Fabrication in Aluminum, Glass, and Steel, Delivering High-Quality
+          Architectural Solutions, Structural Engineering, and Custom Roofing for Developments.
+     </p>
+     <div class="hero-buttons">
+      <button class="btn btn-light" id="bookCallBtn">
+       BOOK A CALL
+      </button>
+      <a class="btn btn-orange" href="#">
+       OUR SERVICES
+      </a>
+     </div>
+    </div>
+    <div class="hero-right">
+     <div class="stats-grid">
+      <div class="stat-box">
+       <h2>
+        200
+        <span>
+         +
+        </span>
+       </h2>
+       <p>
+        Projects Completed
+       </p>
+      </div>
+      <div class="stat-box">
+       <h2>
+        15
+        <span>
+         +
+        </span>
+       </h2>
+       <p>
+        Cities Transformed
+       </p>
+      </div>
+      <div class="stat-box">
+       <h2>
+        15
+        <span>
+         +
+        </span>
+       </h2>
+       <p>
+        Years of Engineering Excellence
+       </p>
+      </div>
+      <div class="stat-box">
+       <h2>
+        100
+        <span>
+         %
+        </span>
+       </h2>
+       <p>
+        Grade-A Certified Materials
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
   </section>
-
   <!-- Popup Modal -->
   <div class="popup-overlay" id="popupOverlay">
-  <div class="popup-card engineering-popup">
-    <button class="close-popup" id="closePopupBtn">&times;</button>
-
-    <div class="popup-top-accent"></div>
-
+   <div class="popup-card engineering-popup">
+    <button class="close-popup" id="closePopupBtn">
+     &times;
+    </button>
+    <div class="popup-top-accent">
+    </div>
     <div class="popup-header">
-      <h3>Hirowtech Engineering (Pvt.) Ltd.</h3>
-      <p class="popup-location">Colombo, Sri Lanka</p>
+     <h3>
+      Hirowtech Engineering (Pvt.) Ltd.
+     </h3>
+     <p class="popup-location">
+      Colombo, Sri Lanka
+     </p>
     </div>
-
     <div class="popup-contact-grid">
-      <div class="contact-cell">
-        <span class="cell-label">PHONE</span>
-        <span class="cell-value">+94 76 863 0825</span>
-      </div>
-
-      <div class="contact-cell">
-        <span class="cell-label">EMAIL</span>
-        <span class="cell-value">hirowtechin@gmail.com</span>
-      </div>
-
-      <div class="contact-cell">
-        <span class="cell-label">WEBSITE</span>
-        <span class="cell-value">www.hirowtech.com</span>
-      </div>
-
-      <div class="contact-cell">
-        <span class="cell-label">LOCATION</span>
-        <span class="cell-value">Colombo, Sri Lanka</span>
-      </div>
+     <div class="contact-cell">
+      <span class="cell-label">
+       PHONE
+      </span>
+      <span class="cell-value">
+       +94 76 863 0825
+      </span>
+     </div>
+     <div class="contact-cell">
+      <span class="cell-label">
+       EMAIL
+      </span>
+      <span class="cell-value">
+       hirowtechin@gmail.com
+      </span>
+     </div>
+     <div class="contact-cell">
+      <span class="cell-label">
+       WEBSITE
+      </span>
+      <span class="cell-value">
+       www.hirowtech.com
+      </span>
+     </div>
+     <div class="contact-cell">
+      <span class="cell-label">
+       LOCATION
+      </span>
+      <span class="cell-value">
+       Colombo, Sri Lanka
+      </span>
+     </div>
     </div>
-
     <div class="popup-action-row">
-      <a
-        href="https://wa.me/94768630825"
-        target="_blank"
-        class="whatsapp-btn engineering-btn"
-      >
-        Message on WhatsApp
-      </a>
+     <a class="whatsapp-btn engineering-btn" href="https://wa.me/94768630825" target="_blank">
+      Message on WhatsApp
+     </a>
     </div>
+   </div>
   </div>
-</div>
+  <!-- Choose Your Division Section -->
+  <section class="choose-division-section" id="companies">
+   <div class="choose-division-container">
+    <div class="choose-division-header">
+     <span class="section-label">OUR COMPANIES</span>
+     <h2>Choose Your Preferred Division</h2>
+     <p>Select the Hirowtech company relevant to your country or service requirement.</p>
+    </div>
+    <div class="choose-division-grid">
+     <a class="division-card" href="hirowtech-services-wll.html">
+      <div class="division-card-top">
+       <span class="division-country">Bahrain</span>
+       <span class="division-arrow">→</span>
+      </div>
+      <h3>Hirowtech Services W.L.L</h3>
+      <p>Aluminum, glass, stainless steel, steel, iron, roofing, and canopy solutions in the Kingdom of Bahrain.</p>
+      <span class="division-cta">VISIT WEBSITE</span>
+     </a>
+     <a class="division-card" href="hirowtech-services-india.html">
+      <div class="division-card-top">
+       <span class="division-country">India</span>
+       <span class="division-arrow">→</span>
+      </div>
+      <h3>Hirowtech Services IN</h3>
+      <p>Aluminum, glass, steel, roofing, canopy, and facility management solutions across India.</p>
+      <span class="division-cta">VISIT WEBSITE</span>
+     </a>
+     <a class="division-card" href="hirowtech-engineering.html">
+      <div class="division-card-top">
+       <span class="division-country">Sri Lanka</span>
+       <span class="division-arrow">→</span>
+      </div>
+      <h3>Hirowtech Engineering (Pvt) Ltd</h3>
+      <p>Architectural and structural engineering solutions with aluminum, glass, steel, roofing, and fabrication excellence.</p>
+      <span class="division-cta">VISIT WEBSITE</span>
+     </a>
+     <a class="division-card" href="hirowtech-trading.html">
+      <div class="division-card-top">
+       <span class="division-country">Sri Lanka</span>
+       <span class="division-arrow">→</span>
+      </div>
+      <h3>Hirowtech Trading &amp; Services (Pvt) Ltd</h3>
+      <p>Import, export, and distribution of all kinds of building materials, connecting suppliers and markets.</p>
+      <span class="division-cta">VISIT WEBSITE</span>
+     </a>
+    </div>
+   </div>
+  </section>
 
-
-
-<section class="services-section" id="services">
-  <div class="services-container">
+  <section class="services-section" id="services">
+   <div class="services-container">
     <div class="services-top">
-      <div class="services-heading-wrap">
-        <span class="section-label">OUR SERVICES</span>
-        <h2>Engineering Solutions Built with Precision, Strength & Quality</h2>
-      </div>
-
-      <a href="#" class="all-services-btn">ALL SERVICES</a>
-    </div>
-
-    <div class="services-grid">
-      <div class="service-card large-card">
-        <img src="Aluminum Works.png" alt="Aluminum Works">
-        <div class="service-content">
-          <h3>Aluminum Works</h3>
-          <p>
-            Custom aluminum fabrication for façades, partitions, doors, windows, and
-            architectural systems designed for durability, clean finishes, and modern performance.
-          </p>
-          <span>FABRICATION | INSTALLATION</span>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <img src="Glass & Glazing Solutions.png" alt="Glass & Glazing Solutions">
-        <div class="service-content">
-          <h3>Glass & Glazing Solutions</h3>
-          <p>
-            High-quality glazing systems including frameless glass, curtain walls, shopfronts,
-            and custom installations for commercial and residential developments.
-          </p>
-          <span>GLAZING | ARCHITECTURAL</span>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <img src="Stainless Steel Works.png" alt="Stainless Steel Works">
-        <div class="service-content">
-          <h3>Stainless Steel Works</h3>
-          <p>
-            Precision-crafted stainless steel railings, handrails, cladding, fixtures, and
-            bespoke metalwork delivering both structural reliability and refined aesthetics.
-          </p>
-          <span>STEELWORK | FINISHING</span>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <img src="Steel & Iron Fabrication.png" alt="Steel & Iron Fabrication">
-        <div class="service-content">
-          <h3>Steel & Iron Fabrication</h3>
-          <p>
-            Structural steel and iron fabrication for gates, frames, supports, staircases,
-            and heavy-duty custom builds engineered for strength and long-term use.
-          </p>
-          <span>STRUCTURAL | CUSTOM BUILDS</span>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <img src="Roofing & Canopy Systems.png" alt="Roofing & Canopy Systems">
-        <div class="service-content">
-          <h3>Roofing & Canopy Systems</h3>
-          <p>
-            Functional and visually strong roofing and canopy solutions tailored for industrial,
-            commercial, and residential spaces with weather-resistant performance.
-          </p>
-          <span>ROOFING | WEATHER PROTECTION</span>
-        </div>
-      </div>
-
-      <div class="service-card large-card wide-card">
-        <img src="Specialized Capabilities.png" alt="Specialized Capabilities">
-        <div class="service-content">
-          <h3>Specialized Capabilities</h3>
-          <p>
-            Advanced custom engineering solutions including unique fabrication requests,
-            multi-material integration, technical detailing, and project-specific execution support.
-          </p>
-          <span>CUSTOM ENGINEERING | TECHNICAL EXPERTISE</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="about-accordion-section" id="about">
-  <div class="about-accordion-container">
-    <div class="about-accordion-left">
-      <span class="about-mini-label">ABOUT US</span>
-
+     <div class="services-heading-wrap">
+      <span class="section-label">
+       OUR SERVICES
+      </span>
       <h2>
-        Engineering Excellence Built on Vision, Mission, and Values
+       Engineering Solutions Built with Precision, Strength &amp; Quality
       </h2>
-
-      <p class="about-intro">
-        At Hirowtech Engineering, we combine technical precision, material expertise,
+     </div>
+     <a class="all-services-btn" href="#">
+      ALL SERVICES
+     </a>
+    </div>
+    <div class="services-grid">
+     <div class="service-card large-card">
+      <img alt="Aluminum Works" src="Aluminum Works.png"/>
+      <div class="service-content">
+       <h3>
+        Aluminum Works
+       </h3>
+       <p>
+        Custom aluminum fabrication for fa&ccedil;ades, partitions, doors, windows, and
+            architectural systems designed for durability, clean finishes, and modern performance.
+       </p>
+       <span>
+        FABRICATION | INSTALLATION
+       </span>
+      </div>
+     </div>
+     <div class="service-card">
+      <img alt="Glass &amp; Glazing Solutions" src="Glass &amp; Glazing Solutions.png"/>
+      <div class="service-content">
+       <h3>
+        Glass &amp; Glazing Solutions
+       </h3>
+       <p>
+        High-quality glazing systems including frameless glass, curtain walls, shopfronts,
+            and custom installations for commercial and residential developments.
+       </p>
+       <span>
+        GLAZING | ARCHITECTURAL
+       </span>
+      </div>
+     </div>
+     <div class="service-card">
+      <img alt="Stainless Steel Works" src="Stainless Steel Works.png"/>
+      <div class="service-content">
+       <h3>
+        Stainless Steel Works
+       </h3>
+       <p>
+        Precision-crafted stainless steel railings, handrails, cladding, fixtures, and
+            bespoke metalwork delivering both structural reliability and refined aesthetics.
+       </p>
+       <span>
+        STEELWORK | FINISHING
+       </span>
+      </div>
+     </div>
+     <div class="service-card">
+      <img alt="Steel &amp; Iron Fabrication" src="Steel &amp; Iron Fabrication.png"/>
+      <div class="service-content">
+       <h3>
+        Steel &amp; Iron Fabrication
+       </h3>
+       <p>
+        Structural steel and iron fabrication for gates, frames, supports, staircases,
+            and heavy-duty custom builds engineered for strength and long-term use.
+       </p>
+       <span>
+        STRUCTURAL | CUSTOM BUILDS
+       </span>
+      </div>
+     </div>
+     <div class="service-card">
+      <img alt="Roofing &amp; Canopy Systems" src="Roofing &amp; Canopy Systems.png"/>
+      <div class="service-content">
+       <h3>
+        Roofing &amp; Canopy Systems
+       </h3>
+       <p>
+        Functional and visually strong roofing and canopy solutions tailored for industrial,
+            commercial, and residential spaces with weather-resistant performance.
+       </p>
+       <span>
+        ROOFING | WEATHER PROTECTION
+       </span>
+      </div>
+     </div>
+     <div class="service-card large-card wide-card">
+      <img alt="Specialized Capabilities" src="Specialized Capabilities.png"/>
+      <div class="service-content">
+       <h3>
+        Specialized Capabilities
+       </h3>
+       <p>
+        Advanced custom engineering solutions including unique fabrication requests,
+            multi-material integration, technical detailing, and project-specific execution support.
+       </p>
+       <span>
+        CUSTOM ENGINEERING | TECHNICAL EXPERTISE
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="about-accordion-section" id="about">
+   <div class="about-accordion-container">
+    <div class="about-accordion-left">
+     <span class="about-mini-label">
+      ABOUT US
+     </span>
+     <h2>
+      Engineering Excellence Built on Vision, Mission, and Values
+     </h2>
+     <p class="about-intro">
+      At Hirowtech Engineering, we combine technical precision, material expertise,
         and dependable execution to deliver architectural and structural solutions
         that meet the demands of modern developments. Our work is guided by a clear
         vision, a practical mission, and values rooted in quality, integrity, and innovation.
-      </p>
-
-      <div class="about-image-wrap">
-        <img src="aboutus.png" alt="Hirowtech Engineering About Us">
-      </div>
+     </p>
+     <div class="about-image-wrap">
+      <img alt="Hirowtech Engineering About Us" src="aboutus.png"/>
+     </div>
     </div>
-
     <div class="about-accordion-right">
-      <div class="accordion-item active">
-        <button class="accordion-header">
-          <span>Our Vision</span>
-          <span class="accordion-icon">−</span>
-        </button>
-        <div class="accordion-content">
-          <p>
-            To be a trusted leader in aluminum, glass, stainless steel, and structural
+     <div class="accordion-item active">
+      <button class="accordion-header">
+       <span>
+        Our Vision
+       </span>
+       <span class="accordion-icon">
+        &minus;
+       </span>
+      </button>
+      <div class="accordion-content">
+       <p>
+        To be a trusted leader in aluminum, glass, stainless steel, and structural
             engineering solutions by shaping durable, innovative, and visually refined
             spaces that elevate the built environment in Sri Lanka and beyond.
-          </p>
-        </div>
+       </p>
       </div>
-
-      <div class="accordion-item">
-        <button class="accordion-header">
-          <span>Our Mission</span>
-          <span class="accordion-icon">+</span>
-        </button>
-        <div class="accordion-content">
-          <p>
-            Our mission is to deliver reliable fabrication and engineering solutions
+     </div>
+     <div class="accordion-item">
+      <button class="accordion-header">
+       <span>
+        Our Mission
+       </span>
+       <span class="accordion-icon">
+        +
+       </span>
+      </button>
+      <div class="accordion-content">
+       <p>
+        Our mission is to deliver reliable fabrication and engineering solutions
             through skilled craftsmanship, certified materials, technical precision,
             and a client-focused approach that ensures each project is completed to
             the highest functional and aesthetic standards.
-          </p>
-        </div>
+       </p>
       </div>
-
-      <div class="accordion-item">
-        <button class="accordion-header">
-          <span>Our Values</span>
-          <span class="accordion-icon">+</span>
-        </button>
-        <div class="accordion-content">
-          <p>
-            We value quality, accountability, innovation, safety, and long-term trust.
+     </div>
+     <div class="accordion-item">
+      <button class="accordion-header">
+       <span>
+        Our Values
+       </span>
+       <span class="accordion-icon">
+        +
+       </span>
+      </button>
+      <div class="accordion-content">
+       <p>
+        We value quality, accountability, innovation, safety, and long-term trust.
             These principles shape how we design, fabricate, and execute every project,
             allowing us to maintain consistency, professionalism, and engineering excellence.
-          </p>
-        </div>
+       </p>
       </div>
+     </div>
     </div>
-  </div>
-</section>
-
-<section class="advantage-section" id="advantage">
-  <div class="advantage-container">
+   </div>
+  </section>
+  <section class="advantage-section" id="advantage">
+   <div class="advantage-container">
     <div class="advantage-top">
-      <div class="advantage-heading-wrap">
-        <span class="advantage-label">OUR ADVANTAGE</span>
-        <h2>The Hirowtech Advantage</h2>
-        <p class="advantage-intro">
-          Every successful engineering outcome depends on more than materials and tools.
+     <div class="advantage-heading-wrap">
+      <span class="advantage-label">
+       OUR ADVANTAGE
+      </span>
+      <h2>
+       The Hirowtech Advantage
+      </h2>
+      <p class="advantage-intro">
+       Every successful engineering outcome depends on more than materials and tools.
           It depends on planning, execution discipline, technical understanding, and the
           ability to deliver with consistency. That is where Hirowtech stands apart.
-        </p>
-      </div>
+      </p>
+     </div>
     </div>
-
     <div class="advantage-grid">
-      <div class="advantage-card reveal-card">
-        <div class="advantage-number">01</div>
-        <h3>Precision in Fabrication</h3>
-        <p>
-          We approach every fabrication requirement with measured accuracy, ensuring
+     <div class="advantage-card reveal-card">
+      <div class="advantage-number">
+       01
+      </div>
+      <h3>
+       Precision in Fabrication
+      </h3>
+      <p>
+       We approach every fabrication requirement with measured accuracy, ensuring
           structural reliability, clean finishing, and proper fit across aluminum,
           glass, stainless steel, and steel systems.
-        </p>
+      </p>
+     </div>
+     <div class="advantage-card reveal-card">
+      <div class="advantage-number">
+       02
       </div>
-
-      <div class="advantage-card reveal-card">
-        <div class="advantage-number">02</div>
-        <h3>Material-Driven Quality</h3>
-        <p>
-          We work with dependable, high-grade materials selected for performance,
+      <h3>
+       Material-Driven Quality
+      </h3>
+      <p>
+       We work with dependable, high-grade materials selected for performance,
           longevity, and project suitability, helping clients achieve both visual
           quality and engineering strength.
-        </p>
+      </p>
+     </div>
+     <div class="advantage-card reveal-card">
+      <div class="advantage-number">
+       03
       </div>
-
-      <div class="advantage-card reveal-card">
-        <div class="advantage-number">03</div>
-        <h3>Execution with Accountability</h3>
-        <p>
-          From first coordination to final handover, our team operates with clear
+      <h3>
+       Execution with Accountability
+      </h3>
+      <p>
+       From first coordination to final handover, our team operates with clear
           responsibility, disciplined workflow, and attention to timelines, details,
           and workmanship standards.
-        </p>
+      </p>
+     </div>
+     <div class="advantage-card reveal-card">
+      <div class="advantage-number">
+       04
       </div>
-
-      <div class="advantage-card reveal-card">
-        <div class="advantage-number">04</div>
-        <h3>Custom Engineering Capability</h3>
-        <p>
-          We do not force projects into generic solutions. We adapt to technical
+      <h3>
+       Custom Engineering Capability
+      </h3>
+      <p>
+       We do not force projects into generic solutions. We adapt to technical
           requirements, architectural intent, and site realities to deliver practical,
           buildable, project-specific outcomes.
-        </p>
-      </div>
+      </p>
+     </div>
     </div>
-
     <div class="advantage-highlight reveal-strip">
-      <div class="highlight-line"></div>
-      <div class="highlight-content">
-        <span class="highlight-mini">ENGINEERED CONFIDENCE</span>
-        <h3>Built for projects that demand structure, finish, and long-term performance.</h3>
-      </div>
+     <div class="highlight-line">
+     </div>
+     <div class="highlight-content">
+      <span class="highlight-mini">
+       ENGINEERED CONFIDENCE
+      </span>
+      <h3>
+       Built for projects that demand structure, finish, and long-term performance.
+      </h3>
+     </div>
     </div>
-  </div>
-</section>
-
-<section class="contact-section" id="contact">
-  <div class="contact-container">
+   </div>
+  </section>
+  <section class="contact-section" id="contact">
+   <div class="contact-container">
     <div class="contact-left">
-      <span class="contact-label">CONTACT</span>
-      <h2>Start Your Next Engineering Project with Confidence</h2>
-      <p class="contact-intro">
-        Whether you need aluminum fabrication, glazing solutions, stainless steel work,
+     <span class="contact-label">
+      CONTACT
+     </span>
+     <h2>
+      Start Your Next Engineering Project with Confidence
+     </h2>
+     <p class="contact-intro">
+      Whether you need aluminum fabrication, glazing solutions, stainless steel work,
         structural steel, roofing systems, or a custom-built engineering solution, our
         team is ready to discuss your requirements and guide the next step.
-      </p>
-
-      <div class="contact-info-grid">
-        <div class="contact-info-card">
-          <span class="info-title">PHONE</span>
-          <p>+94 76 863 0825</p>
-        </div>
-
-        <div class="contact-info-card">
-          <span class="info-title">EMAIL</span>
-          <p>hirowtechin@gmail.com</p>
-        </div>
-
-        <div class="contact-info-card">
-          <span class="info-title">LOCATION</span>
-          <p>Colombo, Sri Lanka</p>
-        </div>
-
-        <div class="contact-info-card">
-          <span class="info-title">WEBSITE</span>
-          <p>www.hirowtech.com</p>
-        </div>
+     </p>
+     <div class="contact-info-grid">
+      <div class="contact-info-card">
+       <span class="info-title">
+        PHONE
+       </span>
+       <p>
+        +94 76 863 0825
+       </p>
       </div>
+      <div class="contact-info-card">
+       <span class="info-title">
+        EMAIL
+       </span>
+       <p>
+        hirowtechin@gmail.com
+       </p>
+      </div>
+      <div class="contact-info-card">
+       <span class="info-title">
+        LOCATION
+       </span>
+       <p>
+        Colombo, Sri Lanka
+       </p>
+      </div>
+      <div class="contact-info-card">
+       <span class="info-title">
+        WEBSITE
+       </span>
+       <p>
+        www.hirowtech.com
+       </p>
+      </div>
+     </div>
     </div>
-
     <div class="contact-right">
-      <div class="contact-form-wrap">
-        <div class="form-top-line"></div>
-        <h3>Send an Inquiry</h3>
-
-        <form class="contact-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="fullName">Full Name</label>
-              <input type="text" id="fullName" placeholder="Enter your full name">
-            </div>
-
-            <div class="form-group">
-              <label for="phoneNumber">Phone Number</label>
-              <input type="text" id="phoneNumber" placeholder="Enter your phone number">
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="emailAddress">Email Address</label>
-              <input type="email" id="emailAddress" placeholder="Enter your email address">
-            </div>
-
-            <div class="form-group">
-              <label for="serviceType">Service Type</label>
-              <select id="serviceType">
-                <option value="">Select a service</option>
-                <option>Aluminum Works</option>
-                <option>Glass & Glazing Solutions</option>
-                <option>Stainless Steel Works</option>
-                <option>Steel & Iron Fabrication</option>
-                <option>Roofing & Canopy Systems</option>
-                <option>Specialized Capabilities</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group full-width">
-            <label for="message">Project Details</label>
-            <textarea id="message" rows="6" placeholder="Tell us about your project requirements"></textarea>
-          </div>
-
-          <button type="button" class="contact-submit-btn">SUBMIT INQUIRY</button>
-        </form>
+     <div class="contact-form-wrap">
+      <div class="form-top-line">
       </div>
+      <h3>
+       Send an Inquiry
+      </h3>
+      <form class="contact-form">
+       <div class="form-row">
+        <div class="form-group">
+         <label for="fullName">
+          Full Name
+         </label>
+         <input id="fullName" placeholder="Enter your full name" type="text"/>
+        </div>
+        <div class="form-group">
+         <label for="phoneNumber">
+          Phone Number
+         </label>
+         <input id="phoneNumber" placeholder="Enter your phone number" type="text"/>
+        </div>
+       </div>
+       <div class="form-row">
+        <div class="form-group">
+         <label for="emailAddress">
+          Email Address
+         </label>
+         <input id="emailAddress" placeholder="Enter your email address" type="email"/>
+        </div>
+        <div class="form-group">
+         <label for="serviceType">
+          Service Type
+         </label>
+         <select id="serviceType">
+          <option value="">
+           Select a service
+          </option>
+          <option>
+           Aluminum Works
+          </option>
+          <option>
+           Glass &amp; Glazing Solutions
+          </option>
+          <option>
+           Stainless Steel Works
+          </option>
+          <option>
+           Steel &amp; Iron Fabrication
+          </option>
+          <option>
+           Roofing &amp; Canopy Systems
+          </option>
+          <option>
+           Specialized Capabilities
+          </option>
+         </select>
+        </div>
+       </div>
+       <div class="form-group full-width">
+        <label for="message">
+         Project Details
+        </label>
+        <textarea id="message" placeholder="Tell us about your project requirements" rows="6"></textarea>
+       </div>
+       <button class="contact-submit-btn" type="button">
+        SUBMIT INQUIRY
+       </button>
+      </form>
+     </div>
     </div>
-  </div>
-</section>
-
-<section class="blog-section" id="blog">
-  <div class="blog-container">
+   </div>
+  </section>
+  <section class="blog-section" id="blog">
+   <div class="blog-container">
     <div class="blog-top">
-      <div class="blog-heading-wrap">
-        <span class="blog-label">OUR BLOG</span>
-        <h2>Insights, Trends & Inspiration in Engineering & Fabrication</h2>
-        <p class="blog-intro">
-          Stay updated with practical insights, project inspiration, fabrication ideas,
+     <div class="blog-heading-wrap">
+      <span class="blog-label">
+       OUR BLOG
+      </span>
+      <h2>
+       Insights, Trends &amp; Inspiration in Engineering &amp; Fabrication
+      </h2>
+      <p class="blog-intro">
+       Stay updated with practical insights, project inspiration, fabrication ideas,
           and engineering perspectives across aluminum, glass, steel, and modern build solutions.
-        </p>
-      </div>
+      </p>
+     </div>
     </div>
-
     <div class="blog-grid">
-      <article class="blog-card">
-        <div class="blog-image-wrap">
-          <span class="blog-date">Apr 04, 2026</span>
-          <img src="blogA.png" alt="Aluminum and façade engineering trends">
-          <span class="blog-tag">Engineering</span>
-        </div>
-        <div class="blog-content">
-          <h3>The Future of Aluminum Works in Modern Architectural Projects</h3>
-          <p>
-            Discover how aluminum fabrication continues to shape sleek, durable, and
-            high-performance architectural applications across modern developments.
-          </p>
-        </div>
-      </article>
-
-      <article class="blog-card">
-        <div class="blog-image-wrap">
-          <span class="blog-date">Apr 02, 2026</span>
-          <img src="blogB.png" alt="Glass and glazing solution inspiration">
-          <span class="blog-tag">Innovation</span>
-        </div>
-        <div class="blog-content">
-          <h3>Glass & Glazing Solutions That Balance Function and Visual Impact</h3>
-          <p>
-            Explore how quality glazing systems improve natural light, project identity,
-            and performance in commercial and residential spaces.
-          </p>
-        </div>
-      </article>
-
-      <article class="blog-card">
-        <div class="blog-image-wrap">
-          <span class="blog-date">Mar 29, 2026</span>
-          <img src="blogC.png" alt="Interior and fabrication design trends">
-          <span class="blog-tag">Fabrication</span>
-        </div>
-        <div class="blog-content">
-          <h3>Custom Steel and Stainless Steel Work for Precision-Driven Spaces</h3>
-          <p>
-            Learn how tailored steel and stainless steel fabrication contributes to
-            structural strength, cleaner finishes, and long-term design value.
-          </p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<footer class="site-footer" id="footer">
-  <div class="footer-container">
-    <div class="footer-top">
-      <div class="footer-cta-left">
-        <h2>Let’s Build Something Exceptional.</h2>
+     <article class="blog-card">
+      <div class="blog-image-wrap">
+       <span class="blog-date">
+        Apr 04, 2026
+       </span>
+       <img alt="Aluminum and fa&ccedil;ade engineering trends" src="blogA.png"/>
+       <span class="blog-tag">
+        Engineering
+       </span>
       </div>
-
-      <div class="footer-cta-right">
-        <p>
-          Ready to move from concept to completion? Contact Hirowtech Engineering
+      <div class="blog-content">
+       <h3>
+        The Future of Aluminum Works in Modern Architectural Projects
+       </h3>
+       <p>
+        Discover how aluminum fabrication continues to shape sleek, durable, and
+            high-performance architectural applications across modern developments.
+       </p>
+      </div>
+     </article>
+     <article class="blog-card">
+      <div class="blog-image-wrap">
+       <span class="blog-date">
+        Apr 02, 2026
+       </span>
+       <img alt="Glass and glazing solution inspiration" src="blogB.png"/>
+       <span class="blog-tag">
+        Innovation
+       </span>
+      </div>
+      <div class="blog-content">
+       <h3>
+        Glass &amp; Glazing Solutions That Balance Function and Visual Impact
+       </h3>
+       <p>
+        Explore how quality glazing systems improve natural light, project identity,
+            and performance in commercial and residential spaces.
+       </p>
+      </div>
+     </article>
+     <article class="blog-card">
+      <div class="blog-image-wrap">
+       <span class="blog-date">
+        Mar 29, 2026
+       </span>
+       <img alt="Interior and fabrication design trends" src="blogC.png"/>
+       <span class="blog-tag">
+        Fabrication
+       </span>
+      </div>
+      <div class="blog-content">
+       <h3>
+        Custom Steel and Stainless Steel Work for Precision-Driven Spaces
+       </h3>
+       <p>
+        Learn how tailored steel and stainless steel fabrication contributes to
+            structural strength, cleaner finishes, and long-term design value.
+       </p>
+      </div>
+     </article>
+    </div>
+   </div>
+  </section>
+  <footer class="site-footer" id="footer">
+   <div class="footer-container">
+    <div class="footer-top">
+     <div class="footer-cta-left">
+      <h2>
+       Let&rsquo;s Build Something Exceptional.
+      </h2>
+     </div>
+     <div class="footer-cta-right">
+      <p>
+       Ready to move from concept to completion? Contact Hirowtech Engineering
           today to discuss your next aluminum, glass, steel, or structural project
           with a team focused on precision, quality, and dependable execution.
-        </p>
-        <a href="#contact" class="footer-cta-btn">START YOUR PROJECT</a>
-      </div>
+      </p>
+      <a class="footer-cta-btn" href="#contact">
+       START YOUR PROJECT
+      </a>
+     </div>
     </div>
-
     <div class="footer-main">
-      <div class="footer-brand">
-        <img src="file:///C:/Users/yudes/Desktop/HIROWTECH%20WEBSITE/Media%20Files/web-logo.png" alt="Hirowtech Logo" class="footer-logo">
-        <p class="footer-tagline">
-          Engineering Strength. Architectural Precision.
-        </p>
-        <p>Colombo, Sri Lanka</p>
-        <p>Email: hirowtechin@gmail.com</p>
-        <p>Call: +94 76 863 0825</p>
-        <p>Web: www.hirowtech.com</p>
-      </div>
-
-      <div class="footer-links-group">
-        <h4>Company</h4>
-        <a href="#">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
-      </div>
-
-      <div class="footer-links-group">
-        <h4>Services</h4>
-        <a href="#">Aluminum Works</a>
-        <a href="#">Glass & Glazing</a>
-        <a href="#">Stainless Steel Works</a>
-        <a href="#">Steel & Iron Fabrication</a>
-        <a href="#">Roofing & Canopy Systems</a>
-      </div>
-
-      <div class="footer-newsletter">
-        <h4>Get project updates & insights.</h4>
-        <p>Enter your email to receive updates, ideas, and engineering insights from us.</p>
-
-        <form class="footer-form">
-          <input type="email" placeholder="Your email address">
-          <button type="button">SEND</button>
-        </form>
-
-        <span>No spam. Only relevant updates.</span>
-      </div>
+     <div class="footer-brand">
+      <img alt="Hirowtech Logo" class="footer-logo" src="web-logo.png"/>
+      <p class="footer-tagline">
+       Engineering Strength. Architectural Precision.
+      </p>
+      <p>
+       Colombo, Sri Lanka
+      </p>
+      <p>
+       Email: hirowtechin@gmail.com
+      </p>
+      <p>
+       Call: +94 76 863 0825
+      </p>
+      <p>
+       Web: www.hirowtech.com
+      </p>
+     </div>
+     <div class="footer-links-group">
+      <h4>
+       Company
+      </h4>
+      <a href="#">
+       Home
+      </a>
+      <a href="#about">
+       About
+      </a>
+      <a href="#services">
+       Services
+      </a>
+      <a href="#blog">
+       Blog
+      </a>
+      <a href="#contact">
+       Contact
+      </a>
+     </div>
+     <div class="footer-links-group">
+      <h4>
+       Services
+      </h4>
+      <a href="#">
+       Aluminum Works
+      </a>
+      <a href="#">
+       Glass &amp; Glazing
+      </a>
+      <a href="#">
+       Stainless Steel Works
+      </a>
+      <a href="#">
+       Steel &amp; Iron Fabrication
+      </a>
+      <a href="#">
+       Roofing &amp; Canopy Systems
+      </a>
+     </div>
+     <div class="footer-newsletter">
+      <h4>
+       Get project updates &amp; insights.
+      </h4>
+      <p>
+       Enter your email to receive updates, ideas, and engineering insights from us.
+      </p>
+      <form class="footer-form">
+       <input placeholder="Your email address" type="email"/>
+       <button type="button">
+        SEND
+       </button>
+      </form>
+      <span>
+       No spam. Only relevant updates.
+      </span>
+     </div>
     </div>
-
     <div class="footer-bottom">
-      <div class="footer-socials">
-        <span>Follow us:</span>
-        <a href="#">Facebook</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">Instagram</a>
-      </div>
-
-      <div class="footer-copy">
-        <p>© 2026 Hirowtech Engineering. All Rights Reserved.</p>
-      </div>
+     <div class="footer-socials">
+      <span>
+       Follow us:
+      </span>
+      <a href="#">
+       Facebook
+      </a>
+      <a href="#">
+       LinkedIn
+      </a>
+      <a href="#">
+       Instagram
+      </a>
+     </div>
+     <div class="footer-copy">
+      <p>
+       &copy; 2026 Hirowtech Engineering. All Rights Reserved.
+      </p>
+     </div>
     </div>
-  </div>
-</footer>
-
-  <script src="script.js"></script>
-</body>
+   </div>
+  </footer>
+  <script src="script.js">
+  </script>
+ </body>
 </html>
